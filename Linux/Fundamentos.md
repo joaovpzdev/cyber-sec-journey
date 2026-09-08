@@ -122,3 +122,4 @@ Notação numérica de permissões: leitura = 4, escrita = 2, execução = 1. A 
 
 - Documentação oficial de cada distribuição
 - `man comando` — manual de qualquer comando diretamente no terminal
+
