@@ -1,5 +1,3 @@
-Claro — abaixo está um `Fundamentos.md` detalhado, estruturado para servir como material de estudo e referência no seu repositório GitHub.
-
 # Fundamentos de Redes
 
 > Este documento apresenta os principais conceitos fundamentais de redes de computadores, com foco no funcionamento prático de redes TCP/IP e sua aplicação em sistemas Linux.
