@@ -1,108 +1,90 @@
-# cyber-sec-journey
-> Repositório em construção. Documento aqui, de forma incremental, meu processo de aprendizado em Linux e Cybersecurity — cada conteúdo é adicionado conforme avanço nos estudos.
+# Cyber Sec Journey
 
-## Sobre
+> Anotações, referências e automações de estudo sobre Linux, redes e segurança cibernética.
 
-Este repositório reúne minhas anotações, resumos e referências de estudo enquanto avanço em Linux e Cybersecurity, partindo dos fundamentos do sistema operacional em direção a tópicos de pentest e segurança ofensiva — incluindo um guia dedicado, ferramenta por ferramenta, das principais ferramentas do Kali Linux. A ideia é que sirva tanto de material de consulta pessoal quanto de registro público do meu progresso.
+Este repositório registra uma jornada prática de aprendizado: dos fundamentos de Linux e redes à metodologia de pentest, segurança de aplicações e uso responsável de ferramentas do Kali Linux. O conteúdo é voltado a consulta e estudo contínuo — não substitui treinamento formal, documentação oficial ou uma avaliação profissional.
 
-Não é um curso nem um guia definitivo — é um diário de estudo. O conteúdo é revisado e expandido continuamente.
+## Uso responsável
 
-## Estrutura atual
+Ferramentas e técnicas de segurança devem ser utilizadas **somente** em laboratórios próprios, CTFs ou ambientes para os quais exista autorização explícita. Não execute reconhecimento, varreduras, testes de senha ou exploração contra sistemas de terceiros sem permissão.
 
-```
+## O que você encontra aqui
+
+| Área | Conteúdo |
+| --- | --- |
+| Linux e Bash | Terminal, shell, comandos, scripts e fundamentos do sistema |
+| Redes | TCP/IP, endereçamento, DNS, protocolos, firewall, SSH e diagnóstico |
+| Kali Linux | Guias de ferramentas para reconhecimento, OSINT, análise de firmware, credenciais, SQLi e pós-exploração |
+| Metodologia | Tipos, níveis e equipes de pentest; OSSTMM, MITRE ATT&CK, regras de engajamento e compliance |
+| Segurança de aplicações | Footprinting, scanning, exploração, SQL Injection e Google Hacking |
+| Automação de estudo | Orquestradores para recon com Nmap/Gobuster e varredura com OWASP ZAP/Nessus |
+
+## Comece por aqui
+
+Uma trilha sugerida para quem está iniciando:
+
+1. **Fundamentos:** [Linux](Linux/Fundaments.md), [terminal](Linux/TheTerminal.md) e [redes TCP/IP](Linux/Net/Fundaments.md).
+2. **Administração e rede:** [endereçamento](Linux/Net/Adressing.md), [protocolos](Linux/Net/Protocols.md), [DNS](Linux/Net/DNS.md), [firewall](Linux/Net/Firewall.md) e [SSH](Linux/Net/SSH.md).
+3. **Metodologia e escopo:** [tipos de pentest](Cybersecurity/PentestingChore/Types.md), [níveis](Cybersecurity/PentestingChore/Levels.md), [equipes](Cybersecurity/PentestingChore/Teams.md) e [OSSTMM 3](Cybersecurity/OSSTMM3.md).
+4. **Segurança ofensiva em ambiente autorizado:** [footprinting](Cybersecurity/Footprinting.md), [scanning](Cybersecurity/Scanning.md), [Nmap](KaliLinux/NetAndReaching/Nmap.md) e [OWASP ZAP](Scripts/vulnscan-orchestrator/README.md).
+
+## Mapa do repositório
+
+```text
 cyber-sec-journey/
-├── Linux/
-│   ├── Fundaments.md                          # Comandos essenciais do Linux
-│   ├── TheTerminal.md                         # Arquitetura do terminal (TTY, PTY, shell)
-│   ├── Bash/
-│   │   ├── BasicsConceptsBashPentesting.md     # Bash scripting aplicado a pentest
-│   │   └── ComandsInternsExterns.md            # Comandos internos vs. externos do shell
-│   └── Net/
-│       ├── Fundaments.md                       # Redes TCP/IP, modelo OSI e encapsulamento
-│       ├── Adressing.md                        # Endereçamento IP, sub-redes, CIDR e NAT
-│       ├── Protocols.md                        # TCP, UDP, ICMP e ARP
-│       ├── DNS.md                              # Resolução de nomes de domínio
-│       ├── NetTools.md                         # Ferramentas de diagnóstico (ip, ss, tcpdump...)
-│       ├── Firewall.md                         # iptables, nftables e filtragem de tráfego
-│       ├── SSH.md                              # Configuração, hardening e tunelamento
-│       └── DomesticsNet.md                     # Construção de uma rede doméstica na prática
-│
-├── KaliLinux/
-│   ├── Basics.md                               # Fundamentos e configuração inicial do Kali
-│   ├── NetAndReaching/
-│   │   ├── Nmap.md                             # Varredura de rede, do básico ao avançado
-│   │   ├── Legion.md                           # Recon e scanning automatizado (fork do SPARTA)
-│   │   ├── Arping.md                           # Descoberta de host via ARP
-│   │   └── Netcat.md                           # Canivete suíço de redes
-│   ├── Credencials/
-│   │   ├── Medusa.md                           # Força bruta de credenciais (online)
-│   │   ├── Hashcat.md                          # Quebra de hash offline (GPU)
-│   │   └── John.md                             # Quebra de hash offline (John the Ripper)
-│   ├── SQLiExploration/
-│   │   └── Sqlmap.md                           # Detecção e exploração automatizada de SQLi
-│   ├── FirmwareAnalis/
-│   │   └── Binwalk.md                          # Análise e extração de firmware
-│   ├── OSINT/
-│   │   └── Maltego.md                          # OSINT e análise de vínculos
-│   ├── PosExploitation/
-│   │   └── Evilwinrm.md                        # Shell WinRM para pós-exploração em Windows
-│   └── SocialEng/
-│       └── Setoolkit.md                        # Social-Engineer Toolkit
-│
-├── Cybersecurity/
-│   ├── SQLi.md                                 # SQL Injection: conceito, tipos e prevenção
-│   ├── GoogleHacking.md                        # Google Dorking: operadores e GHDB
-│   ├── Footprinting.md                         # Metodologia da fase de reconhecimento
-│   ├── Scanning.md                             # Metodologia da fase de varredura
-│   ├── Exploitation.md                         # Metodologia da fase de exploração
-│   └── PentestingChore/
-│       ├── Levels.md                           # Níveis de pentest
-│       ├── Types.md                            # Black Box, Gray Box e White Box
-│       └── ValidCertifications.md              # Certificações reconhecidas na área
-│
+├── Linux/                         # Sistema, terminal, Bash e redes
+├── KaliLinux/                     # Fundamentos e guias de ferramentas
+├── Cybersecurity/                 # Metodologia, vulnerabilidades e compliance
+├── Scripts/
+│   ├── recon-orchestrator/        # Nmap + Gobuster → relatórios HTML/JSON/CSV
+│   └── vulnscan-orchestrator/     # OWASP ZAP + Nessus opcional → relatórios
 └── README.md
 ```
 
-## Trilha de estudos
+### Linux, Bash e redes
 
-Progresso do que já foi documentado e do que está planejado a seguir.
+- [Fundamentos de Linux](Linux/Fundaments.md) e [arquitetura do terminal](Linux/TheTerminal.md)
+- [Conceitos de Bash aplicados a pentest](Linux/Bash/BasicsConceptsBashPentesting.md) e [comandos internos e externos](Linux/Bash/ComandsInternsExterns.md)
+- [Fundamentos de rede](Linux/Net/Fundaments.md), [endereçamento IP e CIDR](Linux/Net/Adressing.md), [protocolos](Linux/Net/Protocols.md) e [transmissão IPv4](Linux/Net/IPV4Transmission.md)
+- [DNS](Linux/Net/DNS.md), [ferramentas de diagnóstico](Linux/Net/NetTools.md), [firewall](Linux/Net/Firewall.md), [SSH](Linux/Net/SSH.md) e [rede doméstica](Linux/Net/DomesticsNet.md)
 
-**Linux**
+### Kali Linux e ferramentas
 
-- [x] Fundamentos do terminal e do shell
-- [x] Comandos internos e externos do Bash
-- [x] Bash scripting aplicado a pentest
-- [x] Redes (endereçamento, protocolos, DNS, ferramentas, firewall, SSH, rede doméstica)
-- [ ] Administração de sistemas (systemd, cron, logs, processos)
-- [ ] Hardening de sistemas
+- [Fundamentos do Kali](KaliLinux/Basics.md)
+- Reconhecimento e rede: [Nmap](KaliLinux/NetAndReaching/Nmap.md), [Legion](KaliLinux/NetAndReaching/Legion.md), [Arping](KaliLinux/NetAndReaching/Arping.md) e [Netcat](KaliLinux/NetAndReaching/Netcat.md)
+- Credenciais: [Medusa](KaliLinux/Credencials/Medusa.md), [Hashcat](KaliLinux/Credencials/Hashcat.md) e [John the Ripper](KaliLinux/Credencials/John.md)
+- Outros tópicos: [SQLMap](KaliLinux/SQLiExploration/Sqlmap.md), [Binwalk](KaliLinux/FirmwareAnalis/Binwalk.md), [Maltego](KaliLinux/OSINT/Maltego.md), [Evil-WinRM](KaliLinux/PosExploitation/Evilwinrm.md) e [SET](KaliLinux/SocialEng/Setoolkit.md)
 
-**Kali Linux — ferramentas**
+### Metodologia, defesa e vulnerabilidades
 
-- [x] Fundamentos e configuração inicial
-- [x] Nmap, Legion, Arping, Netcat (rede e descoberta)
-- [x] Medusa, Hashcat, John the Ripper (credenciais)
-- [x] SQLMap (exploração de SQLi)
-- [x] Binwalk (análise de firmware)
-- [x] Maltego (OSINT)
-- [x] Evil-WinRM (pós-exploração Windows)
-- [x] Social-Engineer Toolkit (engenharia social)
-- [ ] Metasploit Framework
-- [ ] BloodHound / enumeração de Active Directory
+- Processo de pentest: [tipos](Cybersecurity/PentestingChore/Types.md), [níveis](Cybersecurity/PentestingChore/Levels.md), [times](Cybersecurity/PentestingChore/Teams.md) e [certificações](Cybersecurity/PentestingChore/ValidCertifications.md)
+- Referências: [OSSTMM 3](Cybersecurity/OSSTMM3.md) e [MITRE ATT&CK](Cybersecurity/MITREATT@CK.md)
+- Regras e compliance: [GDPR](Cybersecurity/PentestingChore/Rules/GDPR.md), [HIPAA](Cybersecurity/PentestingChore/Rules/HIPAA.md), [PCI DSS](Cybersecurity/PentestingChore/Rules/PCIDSS.md) e [FedRAMP](Cybersecurity/PentestingChore/Rules/FEDRAMP.md)
+- Fases e temas: [footprinting](Cybersecurity/Footprinting.md), [scanning](Cybersecurity/Scanning.md), [exploração](Cybersecurity/Exploitation.md), [SQL Injection](Cybersecurity/SQLi.md) e [Google Hacking](Cybersecurity/GoogleHacking.md)
 
-**Cybersecurity — metodologia e vulnerabilidades**
+## Scripts de automação
 
-- [x] Tipos e níveis de pentest
-- [x] Certificações da área
-- [x] Metodologia: Footprinting → Scanning → Exploitation
-- [x] SQL Injection (SQLi)
-- [x] Google Hacking
-- [ ] Outras vulnerabilidades web (XSS, CSRF, autenticação quebrada)
-- [ ] Writeups de labs e CTFs praticados
+Os scripts organizam a saída de ferramentas oficiais; eles não substituem a validação manual dos resultados nem concedem autorização para testar um alvo.
 
-## Como navegar
+| Projeto | Objetivo | Saídas |
+| --- | --- | --- |
+| [Recon Orchestrator](Scripts/recon-orchestrator/README.md) | Executa Nmap com `vulners`, enumera serviços web com Gobuster e consolida os achados | HTML, JSON e CSV |
+| [Vulnscan Orchestrator](Scripts/vulnscan-orchestrator/README.md) | Executa OWASP ZAP em Docker; pode integrar uma instância Nessus já configurada | HTML, JSON e CSV |
 
-Cada arquivo `.md` é independente e cobre um tópico específico — não é necessário ler em ordem, mas os arquivos dentro de `Linux/` formam uma boa base antes de avançar para `Cybersecurity/`. Dentro de `Linux/` e `KaliLinux/`, o conteúdo é organizado por subpasta temática (redes, credenciais, OSINT, pós-exploração etc.), facilitando a consulta avulsa conforme o assunto em uso no momento. Os guias em `KaliLinux/` seguem todos o mesmo formato (do nível básico ao avançado, com tabela-resumo e referências ao final).
+Leia o README de cada ferramenta antes de executar: eles descrevem requisitos, modos de operação, variáveis opcionais e limitações. Use o modo ativo do ZAP apenas com autorização específica, pois ele pode enviar payloads de teste à aplicação.
 
----
+## Status da jornada
 
-Repositório mantido por [@joaovpzdev](https://github.com/joaovpzdev). Última atualização estrutural: setembro de 2026.
+- [x] Base de Linux, Bash e redes
+- [x] Fundamentos e ferramentas selecionadas do Kali Linux
+- [x] Metodologia de pentest, OSSTMM e MITRE ATT&CK
+- [x] Reconhecimento, varredura e relatórios automatizados para ambientes autorizados
+- [ ] Administração e hardening de sistemas
+- [ ] Vulnerabilidades web adicionais (por exemplo, XSS, CSRF e autenticação)
+- [ ] Estudos de caso, labs e CTFs documentados
+
+## Contribuições e fontes
+
+Correções, referências oficiais e sugestões de melhoria são bem-vindas por meio de issue ou pull request. Sempre priorize a documentação oficial das ferramentas e execute atividades de segurança de forma ética e autorizada.
+
+Mantido por [@joaovpzdev](https://github.com/joaovpzdev).
