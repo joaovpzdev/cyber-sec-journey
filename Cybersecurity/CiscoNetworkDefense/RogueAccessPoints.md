@@ -233,7 +233,7 @@ O atacante conectado ao rogue AP fica **"dentro" da rede**, como se estivesse em
 5. **Investigar:** quem instalou e o que foi acessado (logs do switch, do DHCP e do firewall).
 6. **Corrigir a causa:** por que a porta estava ativa e sem 802.1X?
 
-> **Atenção à lei:** derrubar clientes de redes de terceiros com pacotes de desautenticação (*containment* do WIPS) pode ser **ilegal**. Em 2014, a FCC (a Anatel dos EUA) multou a rede de hotéis **Marriott em US$ 600 mil** por bloquear os hotspots pessoais dos hóspedes. Use contenção sem fio só contra dispositivos ligados à **sua própria rede**, e com orientação jurídica.
+> **Atenção à lei:** derrubar clientes de redes de terceiros com pacotes de desautenticação (*containment* do WIPS) pode ser **ilegal**. Em outubro de 2014, a FCC (equivalente à Anatel nos EUA) multou a **Marriott em US$ 600 mil**. Funcionários do hotel **Gaylord Opryland**, em Nashville, usavam a função de contenção de um sistema de monitoramento Wi-Fi para impedir que participantes de eventos usassem os próprios hotspots, enquanto cobravam até **US$ 1.000 por dispositivo** pelo Wi-Fi do hotel. A FCC considerou que isso violava a **Seção 333 do Communications Act**, que proíbe interferir em comunicações autorizadas. A Marriott se defendeu dizendo que protegia a rede contra "hotspots clandestinos", mas pagou a multa. Use contenção sem fio só contra dispositivos ligados à **sua própria rede**, e com orientação jurídica.
 
 ---
 
@@ -291,4 +291,5 @@ O atacante conectado ao rogue AP fica **"dentro" da rede**, como se estivesse em
 - **OPCW:** [Al Jazeera — Netherlands disrupted Russian hacking attack against OPCW](https://www.aljazeera.com/news/2018/10/4/netherlands-disrupted-russian-hacking-attack-against-opcw)
 - **Nearest Neighbor Attack:** [Help Net Security](https://www.helpnetsecurity.com/?p=317859) · [heise online](https://heise.de/-10130038)
 - **Drones:** [The Register — Drone roof attack](https://www.theregister.com/2022/10/12/drone-roof-attack/) · [Dark Reading](https://www.darkreading.com/threat-intelligence/drones-cyber-spy-exploits-in-the-wild)
+- **Multa da FCC à Marriott:** [Bloomberg — Marriott fined $600,000 for blocking its customers' Wi-Fi](https://www.bloomberg.com/news/articles/2014-10-03/marriott-fined-600-000-for-blocking-its-customers-wi-fi) · [Christian Science Monitor](https://www.csmonitor.com/layout/set/amphtml/Business/Latest-News-Wires/2014/1004/Marriott-fined-600-000-for-jamming-guests-personal-Wi-Fi-networks)
 - **Evil twin na Austrália:** [BleepingComputer](https://www.bleepingcomputer.com/news/security/australian-charged-for-evil-twin-wifi-attack-on-plane) · [Security Affairs — sentença](https://securityaffairs.com/185205/cyber-crime/australian-man-jailed-for-7-years-over-airport-and-in-flight-wi-fi-attacks.html)
