@@ -23,6 +23,7 @@ Os writeups de labs foram feitos exclusivamente em ambientes de treino criados p
 | Metodologia | Tipos, níveis e equipes de pentest; OSSTMM, MITRE ATT&CK, regras de engajamento e compliance |
 | Segurança de aplicações | Footprinting, scanning, exploração, SQL Injection e Google Hacking |
 | Labs (writeups) | 21 labs da Web Security Academy: SQLi, XSS, CSRF, Clickjacking, SSRF, CORS, XXE e OS Command Injection |
+| Labs Blue Team | Análise forense de um pendrive suspeito: USBGuard, imagem forense com cadeia de custódia, Sleuth Kit, carving e análise estatística |
 | Burp Suite | Guias de uso do Proxy, Repeater e Intruder aplicados aos labs |
 | Python para segurança | Cheat sheet de Python aplicado a automação e scripting de segurança |
 | Automação de estudo | Orquestradores de recon, OSINT, varredura de vulnerabilidades e análise de tráfego |
@@ -51,6 +52,7 @@ cyber-sec-journey/
 ├── KaliLinux/                          # Fundamentos e guias de ferramentas
 ├── Cybersecurity/                      # Metodologia, vulnerabilidades e compliance
 ├── Labs/
+│   ├── BlueTeamLabs/SuspiciousUSBDrive/  # Análise forense de pendrive suspeito
 │   ├── SQLinjection/                   # Error-based e blind SQLi
 │   ├── XSS/                            # Reflected, stored e DOM-based XSS
 │   ├── CSRF-Clickjacking-SSRF/         # CSRF, clickjacking e SSRF
@@ -122,6 +124,14 @@ Writeups de labs resolvidos manualmente com o **Burp Suite Community Edition**. 
 
 Mais detalhes sobre a metodologia estão no [README da pasta Labs](Labs/README.md).
 
+## Labs: Blue Team
+
+Análises defensivas feitas em ambiente próprio, documentadas com o processo real, as evidências (prints com dados sensíveis ocultados) e o raciocínio por trás de cada conclusão.
+
+| Writeup | Tema | Técnicas e ferramentas |
+| --- | --- | --- |
+| [Análise forense de um pendrive suspeito](Labs/BlueTeamLabs/SuspiciousUSBDrive/README.md) | Mídia removível não confiável (BadUSB, malware, área oculta, capacidade falsa) | USBGuard, `dmesg`/`udev`, bloqueio de escrita, `dd` + SHA-256, Sleuth Kit, binwalk, PhotoRec, entropia, ClamAV, f3 e MITRE ATT&CK (T1200, T1091) |
+
 ## Python para segurança
 
 - [Cheat sheet de Python para cibersegurança](Scripts/python_sec_basics.md): tipos de dados, networking (sockets), web scraping, manipulação de arquivos, criptografia, operações de sistema, bibliotecas de segurança e scripts de automação.
@@ -167,6 +177,7 @@ Leia o README de cada ferramenta antes de executar: eles descrevem requisitos, m
 - [x] Labs documentados de vulnerabilidades web: SQLi, XSS, CSRF, Clickjacking, SSRF, CORS, XXE e OS Command Injection
 - [ ] Labs de autenticação, controle de acesso, lógica de negócio e upload de arquivos
 - [ ] Administração e hardening de sistemas
+- [x] Lab Blue Team: análise forense de mídia removível suspeita
 - [ ] Monitoramento e detecção (Blue Team) com Zabbix
 - [ ] CTFs documentados
 
