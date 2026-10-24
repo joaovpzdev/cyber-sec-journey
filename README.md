@@ -25,6 +25,7 @@ Os writeups de labs foram feitos exclusivamente em ambientes de treino criados p
 | Labs (writeups) | 21 labs da Web Security Academy: SQLi, XSS, CSRF, Clickjacking, SSRF, CORS, XXE e OS Command Injection |
 | Labs Blue Team | Análise forense de um pendrive suspeito: USBGuard, imagem forense com cadeia de custódia, Sleuth Kit, carving e análise estatística |
 | Burp Suite | Guias de uso do Proxy, Repeater e Intruder aplicados aos labs |
+| Servidores (PDF) | Roteiros de estudo de Windows Server 2025 e Linux (RHEL 10 e Ubuntu 26.04), do básico ao avançado, baseados em documentação oficial |
 | Python para segurança | Cheat sheet de Python aplicado a automação e scripting de segurança |
 | Automação de estudo | Orquestradores de recon, OSINT, varredura de vulnerabilidades e análise de tráfego |
 
@@ -51,6 +52,9 @@ cyber-sec-journey/
 │   └── CyberSecVisionOnNet/            # Guias de redes com olhar de segurança
 ├── KaliLinux/                          # Fundamentos e guias de ferramentas
 ├── Cybersecurity/                      # Metodologia, vulnerabilidades e compliance
+├── Servers/
+│   ├── WindowsServer/                  # Roteiro Windows Server 2025 em PDF (12 documentos)
+│   └── LinuxServer/                    # Roteiro Linux RHEL 10 + Ubuntu 26.04 em PDF (13 documentos)
 ├── Labs/
 │   ├── BlueTeamLabs/SuspiciousUSBDrive/  # Análise forense de pendrive suspeito
 │   ├── SQLinjection/                   # Error-based e blind SQLi
@@ -105,6 +109,15 @@ Série de guias didáticos que explicam cada conceito de rede e, em seguida, o q
 - Referências: [OSSTMM 3](Cybersecurity/OSSTMM3.md) e [MITRE ATT&CK](Cybersecurity/MITREATT@CK.md)
 - Regras e compliance: [GDPR](Cybersecurity/PentestingChore/Rules/GDPR.md), [HIPAA](Cybersecurity/PentestingChore/Rules/HIPAA.md), [PCI DSS](Cybersecurity/PentestingChore/Rules/PCIDSS.md) e [FedRAMP](Cybersecurity/PentestingChore/Rules/FEDRAMP.md)
 - Fases e temas: [footprinting](Cybersecurity/Footprinting.md), [scanning](Cybersecurity/Scanning.md), [exploração](Cybersecurity/Exploitation.md), [SQL Injection](Cybersecurity/SQLi.md) e [Google Hacking](Cybersecurity/GoogleHacking.md)
+
+## Servidores: roteiros de Windows Server e Linux
+
+Dois roteiros de estudo em PDF, com um documento técnico por módulo (conceitos, comandos, laboratórios, checklist e referências oficiais). Veja o [índice completo dos módulos](Servers/README.md).
+
+| Roteiro | Módulos | Certificações relacionadas | Comece por |
+| --- | --- | --- | --- |
+| Windows Server 2025 | 11 módulos: AD DS, Group Policy, DNS/DHCP, armazenamento, Hyper-V, hardening, cluster e backup, monitoramento, Azure híbrido | AZ-802 | [Roteiro geral](Servers/WindowsServer/00-Roteiro-Geral-Windows-Server.pdf) |
+| Linux (RHEL 10 e Ubuntu 26.04) | 12 módulos: shell, permissões, systemd, pacotes, LVM, rede e SSH, serviços, SELinux/AppArmor, KVM e Podman, troubleshooting e backup, Ansible e integração com AD | RHCSA, LFCS | [Roteiro geral](Servers/LinuxServer/00-Roteiro-Geral-Linux-Server.pdf) |
 
 ## Labs: PortSwigger Web Security Academy
 
@@ -176,7 +189,8 @@ Leia o README de cada ferramenta antes de executar: eles descrevem requisitos, m
 - [x] Captura e análise de tráfego automatizada (traffic-orchestrator)
 - [x] Labs documentados de vulnerabilidades web: SQLi, XSS, CSRF, Clickjacking, SSRF, CORS, XXE e OS Command Injection
 - [ ] Labs de autenticação, controle de acesso, lógica de negócio e upload de arquivos
-- [ ] Administração e hardening de sistemas
+- [x] Roteiros de estudo de servidores Windows Server e Linux (RHEL e Ubuntu)
+- [ ] Administração e hardening de sistemas (laboratórios dos roteiros em andamento)
 - [x] Lab Blue Team: análise forense de mídia removível suspeita
 - [ ] Monitoramento e detecção (Blue Team) com Zabbix
 - [ ] CTFs documentados
