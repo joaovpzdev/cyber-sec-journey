@@ -1,8 +1,8 @@
 # Cyber Sec Journey
 
-> Anotações, writeups de labs, guias e automações de estudo sobre Linux, redes e segurança cibernética.
+> Anotações, writeups de labs, manuais de investigação, roteiros de estudo e automações sobre Linux, redes e segurança cibernética.
 
-Este repositório registra uma jornada prática de aprendizado: dos fundamentos de Linux e redes à metodologia de pentest, segurança de aplicações web e uso responsável de ferramentas do Kali Linux. Além das anotações de consulta, ele reúne **writeups de labs resolvidos** na PortSwigger Web Security Academy, **guias de redes com olhar de segurança** (Red Team e Blue Team) e **scripts de automação** que organizam a saída de ferramentas consagradas em relatórios.
+Este repositório registra uma jornada prática de aprendizado: dos fundamentos de Linux e redes à defesa de redes, metodologia de pentest, segurança de aplicações web e uso responsável de ferramentas do Kali Linux. Além das anotações de consulta, ele reúne **writeups de labs** (PortSwigger Web Security Academy, OverTheWire Bandit e Blue Team), **manuais de investigação em PDF** voltados ao dia a dia de operação e suporte, **roteiros de servidores** e **scripts de automação** que organizam a saída de ferramentas consagradas em relatórios.
 
 O conteúdo é voltado a estudo contínuo e consulta. Não substitui treinamento formal, documentação oficial ou uma avaliação profissional.
 
@@ -10,7 +10,7 @@ O conteúdo é voltado a estudo contínuo e consulta. Não substitui treinamento
 
 Ferramentas e técnicas de segurança devem ser utilizadas **somente** em laboratórios próprios, CTFs, plataformas de treino ou ambientes para os quais exista autorização explícita e por escrito. Não execute reconhecimento, varreduras, captura de tráfego, testes de senha ou exploração contra sistemas, redes ou pessoas sem permissão.
 
-Os writeups de labs foram feitos exclusivamente em ambientes de treino criados para esse fim (Web Security Academy).
+Os writeups foram feitos exclusivamente em ambientes de treino criados para esse fim (Web Security Academy, OverTheWire) ou em equipamentos próprios. Os writeups do Bandit seguem as regras do OverTheWire: sem senhas e sem gabarito.
 
 ## O que você encontra aqui
 
@@ -18,16 +18,17 @@ Os writeups de labs foram feitos exclusivamente em ambientes de treino criados p
 | --- | --- |
 | Linux e Bash | Terminal, shell, comandos, scripts e fundamentos do sistema |
 | Redes | TCP/IP, endereçamento, DNS, protocolos, firewall, SSH e diagnóstico |
-| Redes com visão de segurança | Guias didáticos sobre broadcast, DHCP, TCP x UDP, roteamento, NAT, MAC x IP e utilitários de teste, sempre com riscos, detecção e defesa |
-| Kali Linux | Guias de ferramentas para reconhecimento, OSINT, análise de firmware, credenciais, exploração, pós-exploração e SQLi |
+| Redes com visão de segurança | Broadcast, DHCP, TCP x UDP, roteamento, NAT, MAC x IP e utilitários de teste, sempre com riscos, detecção e defesa |
+| Manuais de investigação (PDF) | DNS, políticas SPF, entrega de e-mails, DNS/MX/SPF/DMARC/DKIM, Wireshark, firewalls, logs do Windows/AD e Proxmox Mail Gateway |
+| Defesa de redes (Cisco) | Anotações do curso Network Defense: defesa em profundidade, defesa de sistemas, ACLs, 802.1X/EAP/RADIUS e rogue APs |
+| Kali Linux | Guias de ferramentas para reconhecimento, OSINT, firmware, credenciais, exploração, pós-exploração, SQLi e engenharia social |
 | Metodologia | Tipos, níveis e equipes de pentest; OSSTMM, MITRE ATT&CK, regras de engajamento e compliance |
 | Segurança de aplicações | Footprinting, scanning, exploração, SQL Injection e Google Hacking |
-| Labs (writeups) | 21 labs da Web Security Academy: SQLi, XSS, CSRF, Clickjacking, SSRF, CORS, XXE e OS Command Injection |
-| Labs Blue Team | Análise forense de um pendrive suspeito: USBGuard, imagem forense com cadeia de custódia, Sleuth Kit, carving e análise estatística |
-| Burp Suite | Guias de uso do Proxy, Repeater e Intruder aplicados aos labs |
-| Servidores (PDF) | Roteiros de estudo de Windows Server 2025 e Linux (RHEL 10 e Ubuntu 26.04), do básico ao avançado, baseados em documentação oficial |
-| Python para segurança | Cheat sheet de Python aplicado a automação e scripting de segurança |
-| Automação de estudo | Orquestradores de recon, OSINT, varredura de vulnerabilidades e análise de tráfego |
+| Labs Web (PortSwigger) | 21 labs: SQLi, XSS, CSRF, Clickjacking, SSRF, CORS, XXE e OS Command Injection, com guias de Burp Suite |
+| Labs OverTheWire | Writeups do wargame Bandit com vulnerabilidade, mapeamento MITRE ATT&CK e visão de Blue Team |
+| Labs Blue Team | Análise forense de um pendrive suspeito: USBGuard, imagem forense, Sleuth Kit, carving e análise estatística |
+| Servidores (PDF) | Roteiros de Windows Server 2025 e Linux (RHEL 10 e Ubuntu 26.04), do básico ao avançado |
+| Automação | Orquestradores de recon, OSINT, varredura de vulnerabilidades e análise de tráfego, além de um cheat sheet de Python |
 
 ## Comece por aqui
 
@@ -36,44 +37,52 @@ Uma trilha sugerida para quem está iniciando:
 1. **Fundamentos:** [Linux](Linux/Fundaments.md), [terminal](Linux/TheTerminal.md) e [redes TCP/IP](Linux/Net/Fundaments.md).
 2. **Redes com visão de segurança:** [MAC x IP](Linux/CyberSecVisionOnNet/MACxIP.md), [broadcasts e roteadores](Linux/CyberSecVisionOnNet/BroadcastingAndRouters.md), [DHCP](Linux/CyberSecVisionOnNet/DHCP.md), [TCP x UDP](Linux/CyberSecVisionOnNet/TCPxUDP.md), [roteamento](Linux/CyberSecVisionOnNet/RoutersWebs.md), [NAT](Linux/CyberSecVisionOnNet/NAT.md) e [utilitários de teste](Linux/CyberSecVisionOnNet/Utilitarios.md).
 3. **Administração e rede:** [endereçamento](Linux/Net/Adressing.md), [protocolos](Linux/Net/Protocols.md), [DNS](Linux/Net/DNS.md), [firewall](Linux/Net/Firewall.md) e [SSH](Linux/Net/SSH.md).
-4. **Metodologia e escopo:** [tipos de pentest](Cybersecurity/PentestingChore/Types.md), [níveis](Cybersecurity/PentestingChore/Levels.md), [equipes](Cybersecurity/PentestingChore/Teams.md) e [OSSTMM 3](Cybersecurity/OSSTMM3.md).
-5. **Segurança web na prática:** [guia do Burp Suite para XSS e SQLi](Labs/BurpSuiteHowTo/XSS-SQLInjection.md) e, em seguida, os [writeups de labs](Labs/README.md).
-6. **Segurança ofensiva em ambiente autorizado:** [footprinting](Cybersecurity/Footprinting.md), [scanning](Cybersecurity/Scanning.md), [Nmap](KaliLinux/NetAndReaching/Nmap.md) e [Metasploit](KaliLinux/Exploitation/Metasploit.md).
-7. **Automação com Python:** [cheat sheet de Python para segurança](Scripts/python_sec_basics.md) antes de mergulhar nos orquestradores.
+4. **Defesa de redes:** [defesa em profundidade](Cybersecurity/CiscoNetworkDefense/Module01-UnderstandingDefense.md), [ACLs](Cybersecurity/CiscoNetworkDefense/Module04-AccessControlLists.md) e [802.1X/EAP](Cybersecurity/CiscoNetworkDefense/AuthenticationProtocols-EAP.md).
+5. **Prática no terminal:** [writeups do OverTheWire Bandit](Labs/OverTheWireLabs/README.md).
+6. **Metodologia e escopo:** [tipos de pentest](Cybersecurity/PentestingChore/Types.md), [níveis](Cybersecurity/PentestingChore/Levels.md), [equipes](Cybersecurity/PentestingChore/Teams.md) e [OSSTMM 3](Cybersecurity/OSSTMM3.md).
+7. **Segurança web na prática:** [guia do Burp Suite para XSS e SQLi](Labs/PortSwiggerLabs/BurpSuiteHowTo/XSS-SQLInjection.md) e, em seguida, os [writeups da PortSwigger](Labs/PortSwiggerLabs/README.md).
+8. **Segurança ofensiva em ambiente autorizado:** [footprinting](Cybersecurity/Footprinting.md), [scanning](Cybersecurity/Scanning.md), [Nmap](KaliLinux/NetAndReaching/Nmap.md) e [Metasploit](KaliLinux/Exploitation/Metasploit.md).
+9. **Automação com Python:** [cheat sheet de Python para segurança](Scripts/python_sec_basics.md) antes de mergulhar nos orquestradores.
 
 ## Mapa do repositório
 
 ```text
 cyber-sec-journey/
 ├── Linux/
-│   ├── Fundaments.md, TheTerminal.md   # Sistema e terminal
-│   ├── Bash/                           # Conceitos de Bash e comandos
-│   ├── Net/                            # Fundamentos de redes, DNS, firewall, SSH
-│   └── CyberSecVisionOnNet/            # Guias de redes com olhar de segurança
-├── KaliLinux/                          # Fundamentos e guias de ferramentas
-├── Cybersecurity/                      # Metodologia, vulnerabilidades e compliance
+│   ├── Fundaments.md, TheTerminal.md     # Sistema e terminal
+│   ├── Bash/                             # Conceitos de Bash e comandos
+│   ├── Net/                              # Fundamentos de redes, DNS, firewall, SSH
+│   │   └── Apostila/                     # Manuais de investigação em PDF (8 documentos)
+│   └── CyberSecVisionOnNet/              # Guias de redes com olhar de segurança
+├── Cybersecurity/
+│   ├── CiscoNetworkDefense/              # Anotações do curso Network Defense (Cisco)
+│   ├── PentestingChore/                  # Tipos, níveis, times, certificações e compliance
+│   └── *.md                              # OSSTMM, MITRE ATT&CK, footprinting, scanning, SQLi...
+├── KaliLinux/                            # Fundamentos e guias de ferramentas
 ├── Servers/
-│   ├── WindowsServer/                  # Roteiro Windows Server 2025 em PDF (12 documentos)
-│   └── LinuxServer/                    # Roteiro Linux RHEL 10 + Ubuntu 26.04 em PDF (13 documentos)
+│   ├── WindowsServer/                    # Roteiro Windows Server 2025 em PDF (12 documentos)
+│   └── LinuxServer/                      # Roteiro RHEL 10 + Ubuntu 26.04 em PDF (13 documentos)
 ├── Labs/
-│   ├── BlueTeamLabs/SuspiciousUSBDrive/  # Análise forense de pendrive suspeito
-│   ├── SQLinjection/                   # Error-based e blind SQLi
-│   ├── XSS/                            # Reflected, stored e DOM-based XSS
-│   ├── CSRF-Clickjacking-SSRF/         # CSRF, clickjacking e SSRF
-│   ├── CORS-XXE-OSCommand/             # CORS, XXE e OS command injection
-│   └── BurpSuiteHowTo/                 # Guias de uso do Burp Suite
+│   ├── PortSwiggerLabs/                  # Web Security Academy
+│   │   ├── XSS/                          # Reflected, stored e DOM-based XSS
+│   │   │   └── SQLinjection/             # Error-based e blind SQLi
+│   │   ├── CSRF-Clickjacking-SSRF/       # CSRF, clickjacking e SSRF
+│   │   ├── CORS-XXE-OSCommand/           # CORS, XXE e OS command injection
+│   │   └── BurpSuiteHowTo/               # Guias de uso do Burp Suite
+│   ├── OverTheWireLabs/                  # Writeups do wargame Bandit
+│   └── BlueTeamLabs/SuspiciousUSBDrive/  # Análise forense de pendrive suspeito
 ├── Scripts/
-│   ├── python_sec_basics.md            # Cheat sheet de Python para segurança
-│   ├── recon-orchestrator/             # Nmap + Gobuster → relatórios HTML/JSON/CSV
-│   ├── recon-ng-automation-kit/        # recon-ng → relatório HTML a partir do SQLite
-│   ├── spiderfoot-automation-kit/      # SpiderFoot (OSINT) → relatório HTML a partir do CSV
-│   ├── vulnscan-orchestrator/          # OWASP ZAP + Nessus opcional → relatórios
-│   ├── full-recon-pipeline/            # subfinder → httpx → nuclei → relatório HTML
-│   └── traffic-orchestrator/           # Captura (dumpcap/tcpdump) + análise com tshark
+│   ├── python_sec_basics.md              # Cheat sheet de Python para segurança
+│   ├── recon-orchestrator/               # Nmap + Gobuster → relatórios HTML/JSON/CSV
+│   ├── recon-ng-automation-kit/          # recon-ng → relatório HTML a partir do SQLite
+│   ├── spiderfoot-automation-kit/        # SpiderFoot (OSINT) → relatório HTML a partir do CSV
+│   ├── vulnscan-orchestrator/            # OWASP ZAP + Nessus opcional → relatórios
+│   ├── full-recon-pipeline/              # subfinder → httpx → nuclei → relatório HTML
+│   └── traffic-orchestrator/             # Captura (dumpcap/tcpdump) + análise com tshark
 └── README.md
 ```
 
-### Linux, Bash e redes
+## Linux, Bash e redes
 
 - [Fundamentos de Linux](Linux/Fundaments.md) e [arquitetura do terminal](Linux/TheTerminal.md)
 - [Conceitos de Bash aplicados a pentest](Linux/Bash/BasicsConceptsBashPentesting.md) e [comandos internos e externos](Linux/Bash/ComandsInternsExterns.md)
@@ -82,7 +91,7 @@ cyber-sec-journey/
 
 ### Redes com visão de Cybersecurity
 
-Série de guias didáticos que explicam cada conceito de rede e, em seguida, o que ele significa para segurança: riscos (em nível conceitual), detecção, defesas, evidências para SOC, comparação Red Team x Blue Team, comandos e exercícios de lab.
+Guias didáticos que explicam cada conceito de rede e, em seguida, o que ele significa para segurança: riscos (em nível conceitual), detecção, defesas, evidências para SOC, comparação Red Team x Blue Team, comandos e exercícios de lab.
 
 | Guia | Temas principais |
 | --- | --- |
@@ -95,7 +104,34 @@ Série de guias didáticos que explicam cada conceito de rede e, em seguida, o q
 | [Utilitários de teste de rede](Linux/CyberSecVisionOnNet/Utilitarios.md) | ping, traceroute, dig, ss/netstat, curl, tcpdump/Wireshark e *living off the land* |
 | [Docker expondo banco de dados](Linux/CyberSecVisionOnNet/DockerProblems.md) | Lab mostrando por que o `ufw` não bloqueia portas publicadas pelo Docker e como corrigir |
 
-### Kali Linux e ferramentas
+### Manuais de investigação (PDF)
+
+Manuais práticos voltados à rotina de operação, suporte e resposta a incidentes: como investigar um problema passo a passo, quais comandos e evidências usar e como documentar o diagnóstico.
+
+| Manual | Foco |
+| --- | --- |
+| [Investigação de DNS](Linux/Net/Apostila/Manual_Investigacao_DNS_Edicao2.pdf) | Resolução de nomes, registros, propagação e diagnóstico de falhas |
+| [Investigação de políticas SPF](Linux/Net/Apostila/manual_investigacao_politicas_spf_rev4.pdf) | Leitura e validação de registros SPF, includes, limites de consulta e falhas de autenticação |
+| [Estudo de DNS, MX, SPF, DMARC e DKIM](<Linux/Net/Apostila/Estudo_DNS_MX_SPF_DMARC_DKIM (1).pdf>) | Como os registros de e-mail se relacionam na autenticação do domínio |
+| [Investigação de entrega de e-mails](Linux/Net/Apostila/Manual_Investigacao_Entrega_Emails_Edicao2.pdf) | Rastreamento de mensagens, cabeçalhos, bounces e problemas de entrega |
+| [Proxmox Mail Gateway](Linux/Net/Apostila/Proxmox_Mail_Gateway_Guia_Executivo_Operacional_Edicao2.pdf) | Guia executivo e operacional do gateway de e-mail |
+| [Investigação de tráfego com Wireshark](Linux/Net/Apostila/Investigacao_Trafego_Wireshark_Edicao2.pdf) | Captura, filtros e análise de tráfego como evidência |
+| [Firewalls](Linux/Net/Apostila/Firewalls_Tipos_Funcionamento_Operacao_Investigacao_Edicao2.pdf) | Tipos, funcionamento, operação e investigação de regras e bloqueios |
+| [Logs do Windows e Active Directory](Linux/Net/Apostila/Investigacao_Logs_Windows_Active_Directory_Edicao3.pdf) | Eventos de segurança, autenticação e auditoria no Windows e no AD |
+
+## Defesa de redes (Cisco Network Defense)
+
+Anotações do curso **Network Defense** da Cisco Networking Academy (em andamento), complementadas por estudos próprios sobre os temas do curso.
+
+| Anotação | Temas |
+| --- | --- |
+| [Módulo 1: Entendendo a defesa](Cybersecurity/CiscoNetworkDefense/Module01-UnderstandingDefense.md) | Ativos, vulnerabilidades e ameaças, defesa em profundidade, políticas, regulamentações e padrões |
+| [Módulo 2: Defesa de sistemas e redes](Cybersecurity/CiscoNetworkDefense/Module02-SystemAndNetworkDefense.md) | Segurança física, segurança de aplicações e patches, hardening de serviços e protocolos, segmentação e DMZ, alta disponibilidade, Wi-Fi, mobile, IoT e hosts |
+| [Módulo 4: Listas de controle de acesso (ACLs)](Cybersecurity/CiscoNetworkDefense/Module04-AccessControlLists.md) | Wildcard masks, ACLs padrão e estendidas (numeradas e nomeadas), proteção do VTY, mitigação de ataques e ACLs IPv6 |
+| [Protocolos de autenticação](Cybersecurity/CiscoNetworkDefense/AuthenticationProtocols-EAP.md) | 802.1X, EAP, RADIUS e TACACS+ |
+| [Rogue access points](Cybersecurity/CiscoNetworkDefense/RogueAccessPoints.md) | Tipos de dispositivos sem fio clandestinos, casos reais (TJX, DarkVishnya, Nearest Neighbor), detecção, prevenção e resposta |
+
+## Kali Linux e ferramentas
 
 - [Fundamentos do Kali](KaliLinux/Basics.md)
 - Reconhecimento e rede: [Nmap](KaliLinux/NetAndReaching/Nmap.md), [Legion](KaliLinux/NetAndReaching/Legion.md), [Arping](KaliLinux/NetAndReaching/Arping.md) e [Netcat](KaliLinux/NetAndReaching/Netcat.md)
@@ -103,7 +139,7 @@ Série de guias didáticos que explicam cada conceito de rede e, em seguida, o q
 - Exploração: [Metasploit](KaliLinux/Exploitation/Metasploit.md) e [Msfvenom](KaliLinux/Exploitation/Msfvenom.md)
 - Outros tópicos: [SQLMap](KaliLinux/SQLiExploration/Sqlmap.md), [Binwalk](KaliLinux/FirmwareAnalis/Binwalk.md), [Maltego](KaliLinux/OSINT/Maltego.md), [Evil-WinRM](KaliLinux/PosExploitation/Evilwinrm.md) e [SET](KaliLinux/SocialEng/Setoolkit.md)
 
-### Metodologia, defesa e vulnerabilidades
+## Metodologia, defesa e vulnerabilidades
 
 - Processo de pentest: [tipos](Cybersecurity/PentestingChore/Types.md), [níveis](Cybersecurity/PentestingChore/Levels.md), [times](Cybersecurity/PentestingChore/Teams.md) e [certificações](Cybersecurity/PentestingChore/ValidCertifications.md)
 - Referências: [OSSTMM 3](Cybersecurity/OSSTMM3.md) e [MITRE ATT&CK](Cybersecurity/MITREATT@CK.md)
@@ -125,17 +161,30 @@ Writeups de labs resolvidos manualmente com o **Burp Suite Community Edition**. 
 
 | Writeup | Labs | Vulnerabilidades |
 | --- | :---: | --- |
-| [SQL Injection](Labs/SQLinjection/README.md) | 2 | Visible error-based SQLi e blind SQLi com erros condicionais (com Burp Intruder) |
-| [Cross-Site Scripting](Labs/XSS/README.md) | 8 | Reflected, stored e DOM-based XSS (jQuery, `document.write`, AngularJS, `eval()`) |
-| [CSRF, Clickjacking e SSRF](Labs/CSRF-Clickjacking-SSRF/README.md) | 6 | CSRF sem defesas, clickjacking (com token CSRF, formulário pré-preenchido e frame buster) e SSRF básico |
-| [CORS, XXE e OS Command Injection](Labs/CORS-XXE-OSCommand/README.md) | 5 | CORS com reflexão de origem e origem `null`, XXE para leitura de arquivos e para SSRF, OS command injection |
+| [SQL Injection](Labs/PortSwiggerLabs/XSS/SQLinjection/README.md) | 2 | Visible error-based SQLi e blind SQLi com erros condicionais (com Burp Intruder) |
+| [Cross-Site Scripting](Labs/PortSwiggerLabs/XSS/README.md) | 8 | Reflected, stored e DOM-based XSS (jQuery, `document.write`, AngularJS, `eval()`) |
+| [CSRF, Clickjacking e SSRF](Labs/PortSwiggerLabs/CSRF-Clickjacking-SSRF/README.md) | 6 | CSRF sem defesas, clickjacking (com token CSRF, formulário pré-preenchido e frame buster) e SSRF básico |
+| [CORS, XXE e OS Command Injection](Labs/PortSwiggerLabs/CORS-XXE-OSCommand/README.md) | 5 | CORS com reflexão de origem e origem `null`, XXE para leitura de arquivos e para SSRF, OS command injection |
 
 **Guias de Burp Suite** baseados nos labs:
 
-- [Uso do Burp Suite aplicado a XSS e SQL Injection](Labs/BurpSuiteHowTo/XSS-SQLInjection.md): configuração, fluxo Proxy → Repeater → Intruder → Decoder e o passo a passo para cada classe.
-- [Uso do Burp Suite em CORS, XXE e OS Command Injection](Labs/BurpSuiteHowTo/OSCommand-XXE-CORS/README.md): como cada ferramenta foi usada para identificar e confirmar as falhas.
+- [Uso do Burp Suite aplicado a XSS e SQL Injection](Labs/PortSwiggerLabs/BurpSuiteHowTo/XSS-SQLInjection.md): configuração, fluxo Proxy → Repeater → Intruder → Decoder e o passo a passo para cada classe.
+- [Uso do Burp Suite em CORS, XXE e OS Command Injection](Labs/PortSwiggerLabs/BurpSuiteHowTo/OSCommand-XXE-CORS/README.md): como cada ferramenta foi usada para identificar e confirmar as falhas.
 
-Mais detalhes sobre a metodologia estão no [README da pasta Labs](Labs/README.md).
+Mais detalhes sobre a metodologia estão no [README dos labs da PortSwigger](Labs/PortSwiggerLabs/README.md).
+
+## Labs: OverTheWire Bandit
+
+Writeups do wargame [Bandit](https://overthewire.org/wargames/bandit/) focados em conceitos de Red Team. Cada nível documenta objetivo, conceitos, abordagem, a vulnerabilidade, onde ela aparece no mundo real e como corrigir ou detectar (visão Blue Team), **sem senhas e sem gabarito**.
+
+| Writeup | Tema | Vulnerabilidade / técnica | MITRE ATT&CK |
+| --- | --- | --- | --- |
+| [Bandit 13 → 14](Labs/OverTheWireLabs/Bandit13.md) | Chave SSH privada exposta | Credencial em arquivo legível | T1552.004 |
+| [Bandit 14 → 15](Labs/OverTheWireLabs/Bandit14.md) | Serviço em porta TCP | Comunicação em texto puro | — |
+| [Bandit 15 → 16](Labs/OverTheWireLabs/Bandit15.md) | Serviço com SSL/TLS | Certificado autoassinado | — |
+| [Troubleshooting SSH](Labs/OverTheWireLabs/TroubleshootingSSH.md) | Conexão SSH fechada | Diagnóstico de rate limiting | — |
+
+Os demais níveis planejados estão no [índice do Bandit](Labs/OverTheWireLabs/README.md).
 
 ## Labs: Blue Team
 
@@ -182,6 +231,8 @@ Leia o README de cada ferramenta antes de executar: eles descrevem requisitos, m
 
 - [x] Base de Linux, Bash e redes
 - [x] Guias de redes com visão de segurança (broadcast, DHCP, TCP/UDP, roteamento, NAT, MAC x IP, utilitários)
+- [x] Manuais de investigação: DNS, SPF, entrega de e-mails, Wireshark, firewalls, logs do Windows/AD e Proxmox Mail Gateway
+- [ ] Curso Cisco Network Defense (módulos 1, 2 e 4 documentados; demais em andamento)
 - [x] Fundamentos e ferramentas selecionadas do Kali Linux
 - [x] Metodologia de pentest, OSSTMM e MITRE ATT&CK
 - [x] Reconhecimento, varredura e relatórios automatizados para ambientes autorizados
@@ -189,6 +240,7 @@ Leia o README de cada ferramenta antes de executar: eles descrevem requisitos, m
 - [x] Captura e análise de tráfego automatizada (traffic-orchestrator)
 - [x] Labs documentados de vulnerabilidades web: SQLi, XSS, CSRF, Clickjacking, SSRF, CORS, XXE e OS Command Injection
 - [ ] Labs de autenticação, controle de acesso, lógica de negócio e upload de arquivos
+- [ ] OverTheWire Bandit (níveis 13 a 16 documentados; 16 a 22 em andamento)
 - [x] Roteiros de estudo de servidores Windows Server e Linux (RHEL e Ubuntu)
 - [ ] Administração e hardening de sistemas (laboratórios dos roteiros em andamento)
 - [x] Lab Blue Team: análise forense de mídia removível suspeita
